@@ -9,10 +9,6 @@ tasks:
         --httpsPort="443" \
         --interactive=0
 
-  - command: |
-      docker-compose up
-
-
 ports:
   - port: 8080
     onOpen: open-preview
