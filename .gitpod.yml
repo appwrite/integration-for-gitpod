@@ -7,7 +7,7 @@ tasks:
         appwrite/appwrite:0.12.1 \
         --httpPort="8080" \
         --httpsPort="443" \
-        --interactive=0
+        --interactive="0"
 
   - command: |
       docker-compose up
