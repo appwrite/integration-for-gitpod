@@ -1,5 +1,5 @@
 tasks:
-  - init: docker pull appwrite/appwrite:0.12.0
+  - init: docker-compose pull appwrite --include-deps
     command: |
       docker-compose up
 
