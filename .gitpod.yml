@@ -4,7 +4,7 @@ tasks:
         --volume /var/run/docker.sock:/var/run/docker.sock \
         --volume "$(pwd)":/usr/src/code/appwrite:rw \
         --entrypoint="install" \
-        appwrite/appwrite:0.12.1 \
+        appwrite/appwrite:latest \
         --httpPort="8080" \
         --httpsPort="443" \
         --interactive=0
