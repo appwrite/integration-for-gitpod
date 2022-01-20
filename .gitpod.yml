@@ -1,5 +1,5 @@
 tasks:
-  - init: docker pull
+  - init: docker pull appwrite/appwrite:0.12.0
     command: |
       docker-compose up
 
