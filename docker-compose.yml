@@ -427,15 +427,15 @@ services:
       - _APP_INFLUXDB_HOST
       - _APP_INFLUXDB_PORT
 
-  grafana:
-    image: grafana/grafana
-    container_name: appwrite-grafana
-    ports:
-      - "3001:3000"
-    networks:
-      - appwrite
-    volumes:
-      - appwrite-grafana:/var/lib/grafana
+  # grafana:
+  #   image: grafana/grafana
+  #   container_name: appwrite-grafana
+  #   ports:
+  #     - "3001:3000"
+  #   networks:
+  #     - appwrite
+  #   volumes:
+  #     - appwrite-grafana:/var/lib/grafana
 
 networks:
   gateway:
@@ -450,4 +450,4 @@ volumes:
   appwrite-functions:
   appwrite-influxdb:
   appwrite-config:
-  appwrite-grafana:
+  # appwrite-grafana:

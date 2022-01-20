@@ -1,5 +1,5 @@
 tasks:
-  - init: docker-compose pull --include-deps appwrite 
+  - init: docker-compose pull --include-deps appwrite telegraf influxdb traefik
     command: |
       docker-compose up
 
