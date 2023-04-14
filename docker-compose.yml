@@ -34,7 +34,7 @@ services:
       - appwrite
 
   appwrite:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     container_name: appwrite
     <<: *x-logging
     restart: unless-stopped
@@ -151,7 +151,7 @@ services:
       - _APP_GRAPHQL_MAX_DEPTH
 
   appwrite-realtime:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: realtime
     container_name: appwrite-realtime
     <<: *x-logging
@@ -193,7 +193,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-audits:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-audits
     <<: *x-logging
     container_name: appwrite-worker-audits
@@ -219,7 +219,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-webhooks:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-webhooks
     <<: *x-logging
     container_name: appwrite-worker-webhooks
@@ -241,7 +241,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-deletes:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-deletes
     <<: *x-logging
     container_name: appwrite-worker-deletes
@@ -251,7 +251,7 @@ services:
     depends_on:
       - redis
       - mariadb
-    volumes:
+    volumes: 
       - appwrite-uploads:/storage/uploads:rw
       - appwrite-cache:/storage/cache:rw
       - appwrite-functions:/storage/functions:rw
@@ -296,7 +296,7 @@ services:
       - _APP_EXECUTOR_HOST
 
   appwrite-worker-databases:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-databases
     <<: *x-logging
     container_name: appwrite-worker-databases
@@ -322,7 +322,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-builds:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-builds
     <<: *x-logging
     container_name: appwrite-worker-builds
@@ -350,7 +350,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-certificates:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-certificates
     <<: *x-logging
     container_name: appwrite-worker-certificates
@@ -382,7 +382,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-functions:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-functions
     <<: *x-logging
     container_name: appwrite-worker-functions
@@ -413,7 +413,7 @@ services:
       - DOCKERHUB_PULL_PASSWORD
 
   appwrite-executor:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: executor
     <<: *x-logging
     container_name: appwrite-executor
@@ -471,7 +471,7 @@ services:
       - DOCKERHUB_PULL_PASSWORD
 
   appwrite-worker-mails:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-mails
     <<: *x-logging
     container_name: appwrite-worker-mails
@@ -498,7 +498,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-worker-messaging:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: worker-messaging
     <<: *x-logging
     container_name: appwrite-worker-messaging
@@ -519,7 +519,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-maintenance:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: maintenance
     <<: *x-logging
     container_name: appwrite-maintenance
@@ -550,7 +550,7 @@ services:
       - _APP_MAINTENANCE_RETENTION_USAGE_HOURLY
 
   appwrite-usage:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: usage
     container_name: appwrite-usage
     <<: *x-logging
@@ -579,7 +579,7 @@ services:
       - _APP_LOGGING_CONFIG
 
   appwrite-schedule:
-    image: appwrite/appwrite:1.2.1
+    image: appwrite/appwrite:1.3.1
     entrypoint: schedule
     container_name: appwrite-schedule
     <<: *x-logging
