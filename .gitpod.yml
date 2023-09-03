@@ -1,6 +1,10 @@
 tasks:
   - init: docker-compose pull --include-deps appwrite telegraf influxdb traefik
     command: |
+      DOMAIN=$(echo $GITPOD_WORKSPACE_URL | sed 's/https:\/\/appwrite/8080-appwrite/g')
+      sed -i "s/_APP_DOMAIN=localhost/_APP_DOMAIN=$DOMAIN/g" .env
+      sed -i "s/_APP_DOMAIN_FUNCTIONS=localhost/_APP_DOMAIN_FUNCTIONS=$DOMAIN/g" .env
+      sed -i "s/_APP_DOMAIN_TARGET=localhost/_APP_DOMAIN_TARGET=$DOMAIN/g" .env
       docker-compose up
 
 ports:
