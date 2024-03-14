@@ -5,7 +5,7 @@ tasks:
       sed -i "s/_APP_DOMAIN=localhost/_APP_DOMAIN=$DOMAIN/g" .env
       sed -i "s/_APP_DOMAIN_FUNCTIONS=localhost/_APP_DOMAIN_FUNCTIONS=$DOMAIN/g" .env
       sed -i "s/_APP_DOMAIN_TARGET=localhost/_APP_DOMAIN_TARGET=$DOMAIN/g" .env
-      docker-compose up
+      docker compose up
 
 ports:
   - port: 8080
