@@ -1,6 +1,6 @@
 # An Appwrite template on Gitpod
 
-This is a [Appwrite](https://appwrite.io/) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/).
+This is an [Appwrite](https://appwrite.io/) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/).
 
 ## Next Steps
 
