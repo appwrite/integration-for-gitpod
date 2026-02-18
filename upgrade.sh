@@ -7,6 +7,8 @@ docker compose down -v
 
 INSTALLTATION_DIR=`pwd`
 
+docker pull appwrite/appwrite:latest
+
 docker run -it --rm \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --volume "$INSTALLTATION_DIR":/usr/src/code/appwrite:rw \
