@@ -6,7 +6,7 @@ x-logging: &x-logging
       max-size: '10m'
 services:
   traefik:
-    image: traefik:2.11
+    image: traefik:v3.8
     container_name: appwrite-traefik
     <<: *x-logging
     command:
